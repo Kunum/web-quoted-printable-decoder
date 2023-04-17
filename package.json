@@ -1,0 +1,27 @@
+{
+  "name": "web-quoted-printable-decoder",
+  "version": "1.0.1",
+  "description": "A quoted printable decoder that can be used on the web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fatorius/web-quoted-printable-decoder.git"
+  },
+  "keywords": [
+    "quoted-printable",
+    "quoted",
+    "printable",
+    "decoder",
+    "web",
+    "mime"
+  ],
+  "author": "HugoSouza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fatorius/web-quoted-printable-decoder/issues"
+  },
+  "homepage": "https://github.com/fatorius/web-quoted-printable-decoder#readme"
+}
