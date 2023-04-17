@@ -263,8 +263,8 @@ function decodeWord(charset, encoding, str) {
         for (let i = 0, len = buf.length; i < len; i++) {
             let c = buf[i];
             if (i <= len - 2 && c === 0x3d) {
-                let c1 = this.getHex(buf[i + 1]);
-                let c2 = this.getHex(buf[i + 2]);
+                let c1 = getHex(buf[i + 1]);
+                let c2 = getHex(buf[i + 2]);
                 if (c1 && c2) {
                     let c = parseInt(c1 + c2, 16);
                     bytes.push(c);
