@@ -234,6 +234,13 @@ function decode(buf, fromCharset) {
     }
 }
 
+function getHex(c) {
+    if ((c >= 0x30 /* 0 */ && c <= 0x39) /* 9 */ || (c >= 0x61 /* a */ && c <= 0x66) /* f */ || (c >= 0x41 /* A */ && c <= 0x46) /* F */) {
+        return String.fromCharCode(c);
+    }
+    return false;
+}
+
 function decodeWord(charset, encoding, str) {
     let splitPos = charset.indexOf('*');
     if (splitPos >= 0) {
