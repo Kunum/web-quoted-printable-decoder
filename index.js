@@ -275,18 +275,20 @@ function decodeWord(charset, encoding, str) {
             bytes.push(c);
         }
         str = dec.decode(new Uint8Array(bytes));
-    } else if (encoding === 'B') {
-        str = Buffer.concat(
-            str
+
+        return decode(str, charset);
+    } else {
+        function b64_to_utf8(strs) {
+            return decodeURIComponent(escape(atob(strs)));
+        }
+
+        str = str
                 .split('=')
                 .filter(s => s !== '') 
-                .map(str => Buffer.from(str, 'base64'))
-        );
-    } else {
-        str = Buffer.from(str);
+                .map(str => b64_to_utf8(str))
+        
+        return str;
     }
-
-    return decode(str, charset);
 }
 
 function makeSignalsMatch(str){

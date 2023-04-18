@@ -24,7 +24,6 @@ const originalString = "=?UTF-8?q?Att._Hugo_-_Convite_Israel_360°?";
 var decodedString = decoder.decodeQuotedPrintable();
 
 console.log(decodedString);
-
 //prints: Att. Hugo - Convite Israel 360°
 ```
 
@@ -41,10 +40,8 @@ console.log(decodeQuotedPrintable("=?UTF-8?q?Att._Hugo_-_Convite_Israel_360°?")
 //prints: Att. Hugo - Convite Israel 360°
 ```
 
-
-
 ## Notes
 
-Please notice that this package only decodes **quoted printable** encodings, currently it doesn't decode other formats, but I have plans to implement these encondings in the future.
+Please notice that this package only decodes **quoted printable** and **base64** encodings.
 
 Feel free to contribute ;)
