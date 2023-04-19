@@ -297,6 +297,7 @@ function makeSignalsMatch(str){
         if (str[i] === "?"){
             if (str[i+1] === " "){
                 str = str.slice(0, i+1) + "= " + str.slice(i+1);
+                return str;
             }
             if (i === baseLength-1){
                 str += "="
@@ -317,7 +318,16 @@ function doesSignalsMatch(str){
     }
 }
 
+
+function containsExpression(str){
+    return (str.match(/=?/g) || []).length > 0;
+}
+
 function decodeQuotedPrintable(str){
+    if (!containsExpression(str)){
+        return str;
+    }
+    
     if (!doesSignalsMatch(str)){
         str = makeSignalsMatch(str);
     }
