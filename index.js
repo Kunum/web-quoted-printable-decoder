@@ -311,7 +311,7 @@ function makeSignalsMatch(str){
 
 function doesSignalsMatch(str){
     try{
-        return ((str.match(/=?/g)||[]).length === (str.match(/\?=/g)||[]).length);
+        return ((str.match(/=\?/g)||[]).length === (str.match(/\?=/g)||[]).length);
     }
     catch(e){
         return false;
@@ -320,7 +320,7 @@ function doesSignalsMatch(str){
 
 
 function containsExpression(str){
-    return (str.match(/=?/g) || []).length > 0;
+    return (str.match(/=\?/g) || []).length > 0;
 }
 
 function decodeQuotedPrintable(str){
