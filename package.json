@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fatorius/web-quoted-printable-decoder.git"
+    "url": "git+https://github.com/Kunum/web-quoted-printable-decoder.git"
   },
   "keywords": [
     "quoted-printable",
@@ -21,7 +21,7 @@
   "author": "Kunum Softwares",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fatorius/web-quoted-printable-decoder/issues"
+    "url": "https://github.com/Kunum/web-quoted-printable-decoder/issues"
   },
-  "homepage": "https://github.com/fatorius/web-quoted-printable-decoder#readme"
+  "homepage": "https://github.com/Kunum/web-quoted-printable-decoder#readme"
 }
